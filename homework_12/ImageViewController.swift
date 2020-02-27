@@ -13,12 +13,13 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
 
     var imageToPresent: UIImage?
-    var imageViewContentMode: UIView.ContentMode = .scaleAspectFill
+    
+    static var id: String {
+        return "ImageViewController"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageView.contentMode = imageViewContentMode
         imageView.image = imageToPresent
     }
        
